@@ -1,0 +1,19 @@
+<h1 class="text-center">Shirts</h1>
+<div class="row row-cols-1 row-cols-md-2 g-4">
+  <div class="col" *ngFor="let shirt of shirts">
+    <div class="card " [ngClass]="{'noStock': shirt.stock == 0} ">
+      <img [src]="shirt.img" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">{{shirt.name}}</h5>
+        <p class="card-text">{{shirt.description}}</p>
+        <div class="buyQuantity" *ngIf="shirt.stock != 0">
+          <div class="btn-price" >
+            <button class="btn btn-primary" (click)="addToCart(shirt)">Buy</button>
+            <h3>{{shirt.price | currency}} </h3>
+          </div>
+          <app-input-int [(quantity)]="shirt.quantity" [max]="shirt.stock"></app-input-int>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

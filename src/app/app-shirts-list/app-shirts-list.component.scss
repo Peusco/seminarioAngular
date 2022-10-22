@@ -1,0 +1,34 @@
+.btn-price{
+    display: flex;
+}
+
+.btn-price a{
+    margin-right: 20px;
+}
+
+.noStock{
+    border: 2px solid red;
+}
+
+.buyQuantity{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+
+.card-body p{
+    user-select: none;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    -webkit-line-clamp: 4;
+}
+
+.card-body h5{
+    user-select: none;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    -webkit-line-clamp: 2;
+}

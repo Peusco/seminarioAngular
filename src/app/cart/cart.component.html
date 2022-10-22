@@ -1,0 +1,15 @@
+<h1 class="text-center">Cart</h1>
+<table class="table text-center ">
+    <thead>
+        <th>Name</th>
+        <th>Quantity</th>
+        <th>Price</th>
+    </thead>
+    <tbody>
+        <tr *ngFor="let shirt of cartList$ | async">
+            <td>{{shirt.name}}</td>
+            <td>{{shirt.quantity}}</td>
+            <td>{{shirt.price * shirt.quantity | currency }} </td>
+        </tr>
+    </tbody>
+</table>
